@@ -1,0 +1,14 @@
+{
+  "name": "@softbase/string-sanitizer",
+  "version": "1.0.1",
+  "description": "Sanitize strings by removing HTML, special characters, and extra whitespace.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "keywords": ["sanitize", "string", "html", "typescript", "utility"],
+  "author": "Hayashi Rui",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  }
+}
