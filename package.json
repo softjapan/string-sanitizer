@@ -1,6 +1,6 @@
 {
   "name": "@softbase/string-sanitizer",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "Sanitize strings by removing HTML, special characters, and extra whitespace.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
