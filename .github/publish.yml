@@ -1,0 +1,34 @@
+name: Build and Publish
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # 例: v1.0.0 のようなタグでのみ動作
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v3
+
+      - name: Node.js のセットアップ
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org/'
+
+      - name: 依存関係のインストール
+        run: npm ci
+
+      - name: TypeScript のビルド
+        run: npm run build
+
+      - name: TypeDoc ドキュメントの生成
+        run: npm run docs
+
+      - name: npm パッケージの公開
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
