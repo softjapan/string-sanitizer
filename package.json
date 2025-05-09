@@ -4,11 +4,23 @@
   "description": "Sanitize strings by removing HTML, special characters, and extra whitespace.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
-  "keywords": ["sanitize", "string", "html", "typescript", "utility"],
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "sanitize",
+    "string",
+    "html",
+    "typescript",
+    "utility"
+  ],
   "author": "Hayashi Rui",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "docs": "typedoc"
+  },
+  "devDependencies": {
+    "typedoc": "^0.28.4"
   }
 }
